@@ -20,7 +20,6 @@ class MenuGenerator
         input
     end
 
-
     def generate_dish complexity
         json = File.read './foods.json'
         foods = JSON.parse json
