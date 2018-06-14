@@ -6,9 +6,11 @@ class MenuGenerator
     end
 
     def ask_options
-        print 'How sophisticated would you like your meals to be (how many indregients are you prepared to use)? '
+        print 'How sophisticated would you like your meal (how many indregients are you prepared to use)? '
         complexity = check_input_num gets.chomp
-        puts "Why not try #{generate_dish(complexity).join(' ')}?"
+        if complexity
+            puts "Why not try #{generate_dish(complexity).join(' ')}?"
+        end
     end
 
     def check_input_num input
@@ -30,4 +32,4 @@ class MenuGenerator
     end
 end
 
-dish = MenuGenerator.new
+MenuGenerator.new
